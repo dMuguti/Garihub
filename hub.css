@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body{
-    color:;
+    background-color: #eaf5ff;
 }
 /* Enable smooth scrolling for HTML element */
 html{
@@ -23,13 +23,14 @@ html{
     height: 15%;
     width: 90%;
     clip-path: polygon(100% 0, 95% 50%, 50% 100%, 5% 50%, 0 0);
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 5%;
     background: #d40210;
     padding: 0 10%;
     display: flex;
     flex-direction: row;
+    margin: auto;
 }
 #navbar ul,ol{
     display: flex;
@@ -70,7 +71,7 @@ li a:hover{
 #sideImg{
     height: 500px;
     width: 500px;
-    position: absolute;
+    position: ;
     top: 25%;
     right: 32%;
     z-index: 999;
@@ -104,10 +105,11 @@ li a:hover{
     }
 }
 #contentSection{
-    height: 400px;
-    width: 750px;
-    position: absolute;
-    left: 5%;
+    /* height: 400px;
+    width: 750px; */
+    /* position: absolute; */
+    /* left: 5%; */
+    padding: 100px;
     top: calc(50% - 200px);
 }
 #contentSection h2{
@@ -136,7 +138,7 @@ li a:hover{
 {
     animation: animate 1s linear;
 }
-#contentSection img{
+/* #contentSection img{
     height: 800px;
     position: absolute ;
     top: -200px ;
@@ -145,14 +147,14 @@ li a:hover{
             drop-shadow(-1px -1px 0px #d40219);
     opacity: 0.08;
     z-index: 1;        
-}
+} */
 #socialLinks{
     left: 5%;
 }
 #pagination,#socialLinks{
     height: 60px;
     width: 600px;
-    position: absolute;
+    /* position: absolute; */
     bottom: 4%;
     right: 5%;
     display: flex;
@@ -185,3 +187,38 @@ li a:hover{
 #socialLinks #line{
     background: #d40210;
 }
+  #searchBar {
+    display: flex;
+    align-items: center;
+  }
+  
+  #searchBar input {
+    margin-right: 10px;
+  }
+  
+  #searchBar button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+  
+  #searchBar button:hover {
+    background-color: #555;
+    cursor: pointer;
+  }
+.div-left{
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+.div-right{
+    width: 49%;
+    float: right;
+}
+.main-div{
+    margin-bottom: 30px;
+    height: 450px;
+}
+

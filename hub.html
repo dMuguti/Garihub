@@ -26,29 +26,114 @@
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Privacy</a></li>
             </ol>
+            
         </div>
-        <div id="sideImg">
+        <!-- Add the search bar -->
+        <div>
+            <form id="searchBar">
+                <input type="text" placeholder="Search...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        
+        <!-- <div id="sideImg">
             <img src="side.jpg" alt="">
-        </div>
+        </div> -->
         <div id="contentSection">
-            <h2>JEEP</h2>
-            <p>
-                This is a jeep
-            </p>
-            <button>EXPLORE</button>
+            <!-- <div>
+                <h2>JEEP</h2>
+                <p>
+                    This is a jeep
+                </p>
+                <button>EXPLORE</button>
+            </div> -->
+           
             <!-- <img src="logo.png" alt=""> -->
+            <div class="main-div"><div class="div-left"><h2>BMW</h2><p>7 Series</p><p>2018</p><p>Sedan</p></div><div class="div-right"><img src="https://cdn.carbuzz.com/gallery-images/2018-bmw-7-series-carbuzz-338532.jpg"></div></div>
         </div>
-        <div id="pagination">
+        <!-- <div id="pagination">
             <div id="line"></div>
             <h2>01</h2>
             <h2>02</h2>
             <h2>03</h2>
-        </div>
+        </div> -->
        <div id="socialLinks">
         <i class="fa-brands fa-square-whatsapp"></i>
         <i class="fa-brands fa-instagram"></i>
         <div id="line"></div>
        </div> 
     </div>
+        <!-- Add the JavaScript code to handle the search -->
+        <script>
+            const searchBar = document.getElementById('searchBar');
+            searchBar.addEventListener('submit',  async (event) => {
+                event.preventDefault();
+                const searchQuery = searchBar.querySelector('input').value;
+                // Use the searchQuery to search for results
+                console.log(searchQuery);
+                const results = await search(searchQuery);
+                // console.log(results);
+                const filteredProducts = results.filter(product =>
+                    product.make.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                    product.model.toLowerCase().includes(searchQuery.toLowerCase())
+                );
+                console.log(filteredProducts);
+                const container = document.getElementById('contentSection');
+                container.innerHTML=''
+                for (i = 0; i < filteredProducts.length; i++){
+                    // Create a new div element
+                    const div = document.createElement('div');
+                    div.classList.add('main-div')
+                    const div_left = document.createElement('div');
+                    
+                    const div_right = document.createElement('div');
+                    div_left.classList.add('div-left');
+                    div_right.classList.add('div-right');
+
+                    
+
+                    // Create a new h2 element
+                    const h2 = document.createElement('h2');
+                    
+                    // Set the text content of the h2 element to the title property of the current object
+                    h2.textContent = filteredProducts[i].make;
+                    div_left.appendChild(h2);
+
+                    // const div2 = document.createElement('div');
+                    // div2.classList.add('card-info')
+                    // create a paragraph element
+                    const model = document.createElement("p");
+                    model.textContent = filteredProducts[i].model;
+                    div_left.appendChild(model); // add the paragraph element as a child of the div
+                      
+                    const year = document.createElement("p");
+                    year.textContent = filteredProducts[i].year;
+                    div_left.appendChild(year);
+
+                    const type = document.createElement("p");
+                    type.textContent = filteredProducts[i].type;
+                    div_left.appendChild(type);
+                    // div.append(div2)
+                    // create an image element
+                    const image = document.createElement("img");
+                    image.src = filteredProducts[i].image;
+                    image.style.height = `500px`; // set the height of the image to match the height of the paragraph
+                    div_right.appendChild(image); // add the
+                    div.appendChild(div_left); // add the
+                    div.appendChild(div_right); // add the
+
+                   
+
+                    // Append the div element to the container element
+                    container.appendChild(div);
+                }
+            });
+            const search = async (query) => {
+            const response = await fetch(`./data.json`);
+            const data = await response.json();
+            return data;
+            };
+            
+        </script>
 </body>
 </html>

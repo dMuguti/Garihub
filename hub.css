@@ -112,8 +112,14 @@
     color: #eaf
   }
  #contentSection img{
-    margin-left: 700px;
+    margin-left: 600px;
   }
-  #contentSection.{
-    margin-top: 500px;
+  .main-div {
+    display: flex; /* Set the display property to flex */
+    align-items: center; /* Align the flex items vertically */
   }
+  
+  .div-left {
+    flex: 1; /* Set the flex property to 1 to make it take up all the available space */
+  }
+  

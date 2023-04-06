@@ -1,25 +1,30 @@
 /* Set default styles for all elements */
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-}
-body{
+  }
+  
+  body {
+    color: #000; /* add a color value */
     background-color: #eaf5ff;
-}
-/* Enable smooth scrolling for HTML element */
-html{
+  }
+  
+  /* Enable smooth scrolling for HTML element */
+  html {
     scroll-behavior: smooth;
-}
-#container
-{
+  }
+  
+  #container {
     height: 100vh;
     width: 100%;
     background: #eaf5ff;
-    position: relative;
-}
-#navbar{
+    /* position: relative; */
+    z-index: 1;
+  }
+  
+  #navbar {
     height: 15%;
     width: 90%;
     clip-path: polygon(100% 0, 95% 50%, 50% 100%, 5% 50%, 0 0);
@@ -31,194 +36,84 @@ html{
     display: flex;
     flex-direction: row;
     margin: auto;
-}
-#navbar ul,ol{
+  }
+  
+  #navbar ul,
+  #navbar ol {
     display: flex;
     flex-direction: row;
     list-style: none;
     padding: 25px 0px;
-}
-ul{
+  }
+  
+  #navbar ul {
     position: absolute;
     left: 5%;
-}
-ol{
-position: absolute;
-right: 5%;
-}
-li{
+  }
+  
+  #navbar ol {
+    position: absolute;
+    right: 5%;
+  }
+  
+  #navbar li {
     margin: 0px 60px;
     font-size: 24px;
-}
-li a{
+  }
+  
+  #navbar li a {
     text-decoration: none;
     color: #e2e2e2;
     transition: 0.5s;
-}
-li a:hover{
+  }
+  
+  #navbar li a:hover {
     color: #000;
-}
-#logo{
-    height: 10px;
-    width: 100px;
+  }
+  
+  #logo {
+    height: 100px; /* fix height value */
+    width: 100px; /* fix width value */
     position: absolute;
     top: 5px;
-    left: calc(50% - 60px);
-}
-#logo img{
-    height: 120px;
-}
-#sideImg{
-    height: 500px;
-    width: 500px;
-    position: ;
-    top: 25%;
-    right: 32%;
-    z-index: 999;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-}
-#sideImg img{
-    height: 600px;
-}
-#sideImg:hover img
-{
-    animation: animate 2s linear;
-}
-@keyframes animate{
-    0%
-    {
-        transform: scale(1);
-    }
-    80%
-    {
-        transform: scale(0.60);
-    }
-    95%
-    {
-        transform: scale(1.10);
-    }
-    10%
-    {
-        transform: scale(1);
-    }
-}
-#contentSection{
-    /* height: 400px;
-    width: 750px; */
-    /* position: absolute; */
-    /* left: 5%; */
+    left: calc(50% - 50px); /* fix positioning value */
+  }
+  
+  #logo img {
+    height: 100%; /* make the image height fill the parent div */
+  }
+  
+  #contentSection {
+    height: 400px;
+    width: 750px;
+    position: absolute;
+    left: 5%;
     padding: 100px;
     top: calc(50% - 200px);
-}
-#contentSection h2{
-    font-family: sans-serif;
-    font-size: 150px;
+  }
+  
+  #contentSection h2 {
+    font-size: 70px; /* reduce font size to fit the container */
     color: #d40210;
     font-weight: 900;
-}
-#contentSection p{
-    padding: 0 0 0 20px;
-}
-#contentSection button{
+    margin-bottom: 20px; /* add some spacing */
+  }
+  
+  #contentSection p {
+    padding-left: 20px; /* use padding-left instead of padding */
+  }
+  
+  #contentSection button {
     height: 70px;
     width: 200px;
     border: none;
     outline: none;
     background: #d40210;
-    color: #eaf5ff;
-    cursor: pointer;
-    font-weight: 900;
-    margin: 20px;
-    z-index: 100;
-    position: absolute;
-}
-#contentSection button:hover
-{
-    animation: animate 1s linear;
-}
-/* #contentSection img{
-    height: 800px;
-    position: absolute ;
-    top: -200px ;
-    left: -100px;
-    filter: drop-shadow(1px 1px 0px #d40219)
-            drop-shadow(-1px -1px 0px #d40219);
-    opacity: 0.08;
-    z-index: 1;        
-} */
-#socialLinks{
-    left: 5%;
-}
-#pagination,#socialLinks{
-    height: 60px;
-    width: 600px;
-    /* position: absolute; */
-    bottom: 4%;
-    right: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}
-#pagination #line,#socialLinks #line{
-    height: 3px;
-    width: 200px;
-    background: #000;
-    border-radius: 30px;
-}
-#pagination h2,#socialLinks i{
-    margin: 0px 30px;
-    font-size: 50px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-#pagination h2:hover{
-    color: #d40210;
-}
-#socialLinks i{
-    color: #d40210;
-    font-size: 36px;
-}
-#socialLinks i:hover{
-    color: #000;
-}
-#socialLinks #line{
-    background: #d40210;
-}
-  #searchBar {
-    display: flex;
-    align-items: center;
+    color: #eaf
   }
-  
-  #searchBar input {
-    margin-right: 10px;
+ #contentSection img{
+    margin-left: 700px;
   }
-  
-  #searchBar button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
+  #contentSection.{
+    margin-top: 500px;
   }
-  
-  #searchBar button:hover {
-    background-color: #555;
-    cursor: pointer;
-  }
-.div-left{
-    width: 50%;
-    float: left;
-    height: 100%;
-}
-.div-right{
-    width: 49%;
-    float: right;
-}
-.main-div{
-    margin-bottom: 30px;
-    height: 450px;
-}
-

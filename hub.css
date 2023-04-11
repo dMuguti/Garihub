@@ -1,314 +1,174 @@
-/* Set default styles for all elements */
+/* hub.css */
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-  }
-  
-  body {
-    color: #000; /* add a color value */
-    background-color: #eaf5ff;
-  }
-  
-  /* Enable smooth scrolling for HTML element */
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  #container {
-    height: 100vh;
-    width: 100%;
-    background: #eaf5ff;
-    /* position: relative; */
-    z-index: 1;
-  }
-  
-  #navbar {
-    height: 15%;
-    width: 90%;
-    clip-path: polygon(100% 0, 95% 50%, 50% 100%, 5% 50%, 0 0);
-    /* position: absolute; */
-    top: 0;
-    left: 5%;
-    background: #d40210;
-    padding: 0 10%;
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-  }
-  
-  #navbar ul,
-  #navbar ol {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding: 25px 0px;
-  }
-  
-  #navbar ul {
-    position: absolute;
-    left: 5%;
-  }
-  
-  #navbar ol {
-    position: absolute;
-    right: 5%;
-  }
-  
-  #navbar li {
-    margin: 0px 60px;
-    font-size: 24px;
-  }
-  
-  #navbar li a {
-    text-decoration: none;
-    color: #e2e2e2;
-    transition: 0.5s;
-  }
-  
-  #navbar li a:hover {
-    color: #000;
-  }
-  
-  #logo {
-    height: 100px; /* fix height value */
-    width: 100px; /* fix width value */
-    position: absolute;
-    top: 5px;
-    left: calc(50% - 50px); /* fix positioning value */
-  }
-  
-  #logo img {
-    height: 100%; /* make the image height fill the parent div */
-  }
-  
-  #contentSection {
-    height: 400px;
-    width: 750px;
-    /* position: absolute; */
-    left: 5%;
-    padding: 100px;
-    top: calc(50% - 200px);
-  }
-  
-  #contentSection h2 {
-    font-size: 70px; /* reduce font size to fit the container */
-    color: #d40210;
-    font-weight: 900;
-    margin-bottom: 20px; /* add some spacing */
-  }
-  
-  #contentSection p {
-    padding-left: 20px; /* use padding-left instead of padding */
-  }
-  
-  #contentSection button {
-    height: 70px;
-    width: 200px;
-    border: none;
-    outline: none;
-    background: #d40210;
-    color: #eaf
-  }
- #contentSection img{
-    margin-left: 600px;
-  }
-  .main-div {
-    display: flex; /* Set the display property to flex */
-    align-items: center; /* Align the flex items vertically */
-  }
-  
-  .div-left {
-    flex: 1; /* Set the flex property to 1 to make it take up all the available space */
-  }
-
-
-  /* ----about---- */
-#about{
-    padding: 80px 0;
-    color: #d40210;
 }
-.row{
+
+body {
+    font-family: 'Overpass', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#navbar {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: #222;
 }
-.about-col-1{
-    flex-basis: 35%;
-}
-.about-col-1 img{
-    width: 100%;
-    border-radius: 15px;
-}
-.about-col-2{
-    flex-basis: 60%;
-}
-.sub-title{
-    font-size: 60px;
-    font-weight: 600;
-    color: #d40210;
-}
-.tab-titles{
+
+#navbar ul, #navbar ol {
     display: flex;
-    margin: 20px 0 40px;
-}
-.tab-links{
-    margin-right: 50px;
-    font-size: 18;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-}
-.tab-links::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.75s;
-}
-.tab-links.active-link::after{
-    width: 50%;
-}
-.tab-contents ul li{
-    list-style: none;
-    margin: 10px 0;
-}
-.tab-contents ul li span{
-    color: aqua;
-    font-size: 14px;
-}
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
 }
 
-/*--services-- */
-#services{
-    padding: 30px 0;
-}
-.Services-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-.Services-list div{
-    background: #262626;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 10px;
-    transition: background 0.75s; transform 0.75s;
-}
-.Services-list div i{
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-.Services-list div h2{
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-.Services-list div a{
-    text-decoration: none;
-    color:#d40210;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-}
-.Services-list div:hover{
-    background: #ff004f;
-    transform: translate(-10px);
-}
-/* --portfolio-- */
-#Privacy{
-    padding: 50px 0;
-}
-.work-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-.work{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-.work img{
-    width: 100%;
-    border-radius: 10px;
-    display: block;
+#navbar li {
+    margin-right: 1.5rem;
 }
 
-/* --contact-- */
-.contact-left{
-    flex-basis: 35%;
+#navbar li:last-child {
+    margin-right: 0;
 }
-.contact-right{
-    flex-basis: 60%;
-}
-.contact-left p{
-    margin-top: 30px;
-}
-.contact-left p i{
-    color: #ff004f;
-    margin-right: 15px;
-    font-size: 25px;
-}
-.social-icons{
-    margin-top: 30px;
-}
-.social-icons a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: #ababab;
-    display: inline-block;
-    transition: transform 0.75s;
-}
-.social-icons a:hover{
-    color: #ff004f;
-    transform: translateY(-5px);
-}
-.btn.btn2{
-    display: inline-block;
-    background: #ff004f;
-}
-.contact-right form{
-    width: 100%;
-}
-form input, form textarea{
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: #262626;
-    padding: 15px;
-    margin: 15px 0;
+
+#navbar a {
     color: #fff;
-    font-size: 18px;
-    border-radius: 6px;
+    font-size: 1.1rem;
 }
-form .btn2{
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
+
+#logo img {
+    height: 40px;
 }
-.copyright{
+
+#searchBar {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+#searchBar input {
     width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    background: #262626;
-    font-weight: 300;
-    margin-top: 20px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
 }
 
+#searchBar button {
+    padding: 8px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
 
-  
+#searchBar button:hover {
+    background-color: #ddd;
+}
+
+#contentSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.main-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.div-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.div-left h2 {
+    margin-bottom: 0.5rem;
+}
+
+.div-right img {
+    max-width: 500px;
+    border-radius: 4px;
+}
+
+.sub-title {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+#About,
+#Services,
+#Privacy,
+#Contact {
+    margin: 4rem 0;
+}
+
+.Services-list {
+    display: flex;
+    gap: 2rem;
+}
+
+.Services-list > div {
+    flex: 1;
+}
+
+.fa-browser,
+.fa-laptop-mobile,
+.fa-users {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#Contact .row {
+    display: flex;
+    gap: 2rem;
+}
+
+.contact-left,
+.contact-right {
+    flex: 1;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.social-icons a:hover {
+    color: #777;
+}
+
+.contact-right form input,
+.contact-right form textarea {
+    width: 100%;
+    padding: 0.5
+}

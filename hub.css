@@ -192,20 +192,41 @@ ul, ol {
     flex: 1;
 }
 
-.social-icons {
-    display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
-}
-
+/* Style the social icons */
 .social-icons a {
     font-size: 1.5rem;
-    color: black;
-}
-
-.social-icons a:hover {
-    color: #ff3a3a;
-}
+  }
+  
+  /* Facebook icon color */
+  .social-icons a.facebook {
+    color: #1877F2;
+  }
+  
+  /* Twitter icon color */
+  .social-icons a.twitter {
+    color: #1DA1F2;
+  }
+  
+  /* Instagram icon color */
+  .social-icons a.instagram {
+    color: #C13584;
+  }
+  
+  /* LinkedIn icon color */
+  .social-icons a.linkedin {
+    color: #0077B5;
+  }
+  
+  /* YouTube icon color */
+  .social-icons a.youtube {
+    color: #FF0000;
+  }
+  
+  /* Change the color on hover */
+  .social-icons a:hover {
+    opacity: 0.8;
+  }
+  
 
 .contact-right form input,
 .contact-right form textarea {

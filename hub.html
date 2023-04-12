@@ -18,7 +18,6 @@
     <div id="container">
         <div id="navbar">
             <ul>
-                <!-- <li><a href="#">Home</a></li> -->
                 <li><a href="#About">About</a></li>
                 <li><a href="#Services">Services</a></li>
             </ul>
@@ -26,7 +25,6 @@
                 <img src="logo.png" alt="">
             </div>
             <ol>
-                <!-- <li><a href="#">Product</a></li> -->
                 <li><a href="#Contact">Contact</a></li>
                 <li><a href="#Privacy">Privacy</a></li>
             </ol>
@@ -86,17 +84,16 @@
     </div>
    </div>
    <!--Privacy-->
-   <div id="Privacy">
+<!--Privacy-->
+<div id="Privacy">
     <div class="container">
-        <h1 class="sub-title">Privacy policy</h1>
-       <p>
-        1. We may collect information such as device data and browsing behavior to improve the app and personalize the experience.
-        2. User information won't be sold or rented to third parties, but may be shared with partners who help operate the app.
-        3. We take reasonable measures to protect user information, but there is always some risk when transmitting data over the internet.
-        4. Users can control aspects of their information and contact support to request access, correction, or deletion of personal data.
-       </p>
+      <h1 class="sub-title">Privacy policy</h1>
+      <p>1. We may collect information such as device data and browsing behavior to improve the app and personalize the experience.</p>
+      <p>2. User information won't be sold or rented to third parties, but may be shared with partners who help operate the app.</p>
+      <p>3. We take reasonable measures to protect user information, but there is always some risk when transmitting data over the internet.</p>
+      <p>4. Users can control aspects of their information and contact support to request access, correction, or deletion of personal data.</p>
     </div>
-   </div>
+  </div>
    <!--contact-->
    <div id="Contact">
     <div class="container">
@@ -122,6 +119,13 @@
             </div>
             </div>
         </div>
+
+        <button class="like-button">
+            <i class="fas fa-thumbs-up"></i>
+            <span class="like-count">0</span>
+          </button>
+          
+
         <div class="copyright">
             <p>copyright&#169; Muguti.2023</p>
         </div>
@@ -163,8 +167,6 @@
                     h2.textContent = filteredProducts[i].make;
                     div_left.appendChild(h2);
 
-                    // const div2 = document.createElement('div');
-                    // div2.classList.add('card-info')
                     // create a paragraph element
                     const model = document.createElement("p");
                     model.textContent = filteredProducts[i].model;
@@ -187,9 +189,9 @@
                     const image = document.createElement("img");
                     image.src = filteredProducts[i].image;
                     image.style.height = `500px`; // set the height of the image to match the height of the paragraph
-                    div_right.appendChild(image); // add the
-                    div.appendChild(div_left); // add the
-                    div.appendChild(div_right); // add the
+                    div_right.appendChild(image);
+                    div.appendChild(div_left); 
+                    div.appendChild(div_right);
 
 
 
@@ -202,8 +204,19 @@
             const data = await response.json();
             return data;
 };
-
-
-        </script>
+</script>
+<script>
+    // Select the like button and like count elements
+    const likeButton = document.querySelector(".like-button");
+    const likeCount = document.querySelector(".like-count");
+  
+    // Add a click event listener to the like button
+    likeButton.addEventListener("click", () => {
+      // Increment the like count
+      const currentCount = parseInt(likeCount.textContent, 10);
+      likeCount.textContent = currentCount + 1;
+    });
+  </script>
+  
 </body>
 </html>

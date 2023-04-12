@@ -133,15 +133,23 @@ ul, ol {
     margin: 4rem 0;
 }
 
+/* Services-list container */
 .Services-list {
     display: flex;
-    gap: 2rem;
-}
-
-.Services-list > div {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  
+  /* Services-list items */
+  .Services-list > div {
     flex: 1;
-}
-
+    min-width: 250px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
 .fa-browser,
 .fa-laptop-mobile,
 .fa-users {
@@ -191,3 +199,44 @@ ul, ol {
     font-size: 0.9rem;
     color: #999;
 }
+/* Red and orange theme color */
+:root {
+    --theme-color: linear-gradient(135deg, #ff3a3a 0%, #ff9800 100%);
+  }
+  
+  /* Navigation bar */
+  #navbar {
+    background-image: var(--theme-color);
+  }
+  
+  /* Search bar button */
+  #searchBar button {
+    background-image: var(--theme-color);
+    border: 1px solid transparent;
+    color: #fff;
+  }
+  
+  /* Section titles */
+  .sub-title {
+    color: #ff3a3a;
+    font-weight: bold;
+  }
+  
+  /* Services icons */
+  .Services-list div i {
+    color: #ff3a3a;
+    font-size: 3rem;
+  }
+  
+  /* Contact form submit button */
+  .btn.btn2 {
+    background-image: var(--theme-color);
+    color: #fff;
+    border: 1px solid transparent;
+  }
+  
+  .btn.btn2:hover {
+    background-color: #e33434;
+    border: 1px solid #e33434;
+  }
+  

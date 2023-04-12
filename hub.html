@@ -65,7 +65,7 @@
    <!--Services-->
    <div id="Services">
     <div class="container">
-        <h1 class="sub-title">My Services</h1>
+        <h1 class="sub-title">Our Services</h1>
         <div class="Services-list">
             <div>
                 <i class="fa-sharp fa-solid fa-browser"></i>
@@ -102,7 +102,7 @@
     <div class="container">
         <div class="row">
             <div class="contact-left">
-                <h1 class="sub-title">Contact me</h1>
+                <h1 class="sub-title">Contact Us</h1>
                 <p><i class="fa-duotone fa-paper-plane-top"></i> omiahderek56@gmail.com </p>
                 <p><i class="fa-solid fa-phone-arrow-down-left"></i> +254700627047 </p>
                 <div class="social-icons">
@@ -177,6 +177,11 @@
                     const type = document.createElement("p");
                     type.textContent = filteredProducts[i].type;
                     div_left.appendChild(type);
+
+                    const quote = document.createElement("p");
+                    quote.textContent = filteredProducts[i].quote;
+                    div_left.appendChild(quote);
+
                     // div.append(div2)
                     // create an image element
                     const image = document.createElement("img");
@@ -193,10 +198,11 @@
                 }
             });
             const search = async (query) => {
-            const response = await fetch(`./data.json`);
+            const response = await fetch('http://localhost:3000/cars');
             const data = await response.json();
             return data;
-            };
+};
+
 
         </script>
 </body>

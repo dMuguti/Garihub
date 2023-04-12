@@ -38,6 +38,7 @@ Garihub aims to create a centralized platform for users to explore and appreciat
 * Open the folder location on terminal and use the following command to run app:
 
 ## How To Run It
+npx json-server --watch db.json
 
 *****
 ## Live Link
